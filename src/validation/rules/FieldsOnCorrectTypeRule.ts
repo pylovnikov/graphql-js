@@ -38,6 +38,7 @@ export function FieldsOnCorrectTypeRule(
       if (type) {
         const fieldDef = context.getFieldDef();
         if (!fieldDef) {
+          return;
           // This field doesn't exist, lets look for suggestions.
           const schema = context.getSchema();
           const fieldName = node.name.value;
